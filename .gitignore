@@ -19,3 +19,4 @@ go.work
 
 # Project
 .vscode
+.DS_Store
