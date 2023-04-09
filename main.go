@@ -1,27 +1,10 @@
+/*
+Copyright © 2023 Roger Souza <rogersilvasouza@hotmail.com>
+*/
 package main
 
-import (
-	"context"
-	"fmt"
-	"github.com/chromedp/chromedp"
-)
+import "github.com/rogersilvasouza/gonter/internal/google"
 
 func main() {
-	fmt.Println("Gonter")
-
-	ctx, cancel := chromedp.NewContext(context.Background())
-	defer cancel()
-
-	err := chromedp.Run(ctx, chromedp.Navigate("https://instagram.com/rogersilvasouza"))
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	var spanText string
-	err = chromedp.Run(ctx, chromedp.Text("span", &spanText, chromedp.NodeVisible))
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	fmt.Println(spanText)
+	google.GetResult("g1.globo.com")
 }
