@@ -6,6 +6,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/rogersilvasouza/gonter/internal/csv"
 	"github.com/rogersilvasouza/gonter/internal/google"
 	"github.com/spf13/viper"
 )
@@ -26,4 +27,6 @@ func main() {
 		fmt.Println(url)
 		google.GetResult(url)
 	}
+
+	csv.SaveResult()
 }
