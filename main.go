@@ -4,6 +4,8 @@ Copyright © 2023 Roger Souza <rogersilvasouza@hotmail.com>
 package main
 
 import (
+	"fmt"
+
 	"github.com/rogersilvasouza/gonter/internal/google"
 	"github.com/spf13/viper"
 )
@@ -22,7 +24,6 @@ func main() {
 
 	for _, url := range urls {
 		fmt.Println(url)
+		google.GetResult(url)
 	}
-
-	google.GetResult("g1.globo.com")
 }

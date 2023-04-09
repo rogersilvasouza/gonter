@@ -12,8 +12,6 @@ import (
 )
 
 func GetResult(site string) {
-	fmt.Println("Gonter")
-
 	dir, err := os.MkdirTemp("", "chromedp-example")
 	if err != nil {
 		log.Fatal(err)
